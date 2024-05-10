@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>Look Sam idc you made me lose my mind just now with your pictures with your friends you look so beautiful ANNNNNNNND i wanna ask you if !!!
+</h2>
+<h4>reminder : "Don't try to click no please"</h4>
+<title>Do you wanna be my gf?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .message {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .btn {
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="message">Do you wanna be my gf?</div>
+
+<button class="btn" id="yesBtn">Yes</button>
+<button class="btn" id="noBtn" onmouseover="moveButton()">No</button>
+
+<div id="response" class="message" style="display: none;"></div>
+
+<script>
+    document.getElementById("yesBtn").addEventListener("click", function() {
+        document.getElementById("response").innerText = "That's my girl!";
+        document.getElementById("response").style.display = "block";
+    });
+
+    function moveButton() {
+        var button = document.getElementById("noBtn");
+        var maxX = window.innerWidth - button.offsetWidth;
+        var maxY = window.innerHeight - button.offsetHeight;
+        var newX = Math.random() * maxX;
+        var newY = Math.random() * maxY;
+        button.style.position = "absolute";
+        button.style.left = newX + "px";
+        button.style.top = newY + "px";
+    }
+</script>
+
+</body>
+</html>
